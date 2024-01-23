@@ -1,0 +1,116 @@
+/* editing the btn  */
+button {
+    margin: auto;
+    margin-top: 300px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* set the width ,height */
+button.learn
+{
+    width: 12rem;
+    height: auto;
+}
+
+/* makking it  circle like and adding really smooth  transition   */
+button.learn .circle {
+    /*  transition  , position */
+    transition: all 0.55s ;
+    position: relative;
+    display: flex;
+    margin: 0;
+    /* color ,cricle , size  */
+    width: 48px;
+    height: 48px;
+    background: #282936;
+    border-radius: 26px;
+
+}
+/* set the postion of the  icon */
+button.learn .circle .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /*  u can set it as 24px 6px or auto  */
+    margin: auto;
+}
+
+
+button.learn .circle .icon.arrow {
+    transition: all 0.55s;
+    left: 10px;
+    width: 18px;
+    height: 0.125rem;
+    background: none;
+
+}
+/* making the arrow shape by  content set the w & h and the info that make this      */
+.circle .icon.arrow::before {
+      /* seting the arrow from secrtch   */
+    position: absolute;
+    content: "";
+    top: -4.64px;
+    right: 1px;
+    width: 10px;
+    height: 10px;
+    /* here the info that make the arrow apper */
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+
+
+button.learn .button-text {
+    transition: all 0.55s;
+    /*  absolute so the transition work the perfect way */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* adding the  padding, margin  so the desgin fit  */
+    padding: 12px 0;
+    margin: 0 0 0 29.6px;
+    color: #252525;
+    /* bolded , centered ,uppercase   */
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+
+
+
+}
+
+/* hover  section*/
+
+/* so the circle take 100% width in hover efactt filling the hole btn with the same color */
+button:hover .circle
+{
+    width: 100%;
+}
+/* making a white line  */
+button:hover .circle .icon.arrow
+{
+background: #fff;
+transform: translate(16px, 0 );
+
+}
+
+/* after the first hover now  e reverse the color of the text */
+
+button:hover .button-text
+{
+    color: #fff;
+}
